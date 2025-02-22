@@ -18,14 +18,14 @@ app.use(router);
 
 app.use(
   cors({
-    origin: "https://ichat07.netlify.app/",
+    origin: "http://localhost:5173/",
     methods: ["GET", "POST"],
   })
 );
 
 const io = new Server(server, {
   cors: {
-    origin: "https://ichat07.netlify.app/",
+    origin: "http://localhost:5173/",
     methods: ["GET", "POST"],
   },
 });
