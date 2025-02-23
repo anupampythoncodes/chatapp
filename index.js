@@ -71,6 +71,7 @@ io.on("connection", (socket) => {
         user: "admin",
         text: `${user.name}, just left`,
       });
+       io.to(user.room).emit('roomdata', { room: user.room, users: getuserinrooms(user.room)});
     }
   });
 });
